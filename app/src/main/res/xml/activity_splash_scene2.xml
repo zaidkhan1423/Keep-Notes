@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="3000"
+        motion:autoTransition="animateToEnd">
+       <KeyFrameSet>
+           <KeyAttribute
+               motion:motionTarget="@+id/linearLayout"
+               motion:framePosition="0"
+               android:scaleX="0.8" />
+           <KeyAttribute
+               motion:motionTarget="@+id/linearLayout"
+               motion:framePosition="0"
+               android:scaleY="0.8" />
+           <KeyAttribute
+               motion:motionTarget="@+id/linearLayout"
+               motion:framePosition="40"
+               android:scaleX="0.9" />
+           <KeyAttribute
+               motion:motionTarget="@+id/linearLayout"
+               motion:framePosition="40"
+               android:scaleY="0.9" />
+           <KeyAttribute
+               motion:motionTarget="@+id/linearLayout"
+               motion:framePosition="100"
+               android:scaleY="1.2" />
+           <KeyAttribute
+               motion:motionTarget="@+id/linearLayout"
+               motion:framePosition="100"
+               android:scaleX="1.2" />
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            motion:layout_constraintVertical_bias="0.402"
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintHorizontal_bias="0.498"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/linearLayout" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            motion:layout_constraintVertical_bias="0.399"
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintHorizontal_bias="0.498"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/linearLayout" />
+    </ConstraintSet>
+</MotionScene>
